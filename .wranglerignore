@@ -1,0 +1,9 @@
+.git/
+node_modules/
+.wrangler/
+.env
+.env.local
+.gitignore
+wrangler.jsonc
+*.zip
+media/clients_and_partners.zip
