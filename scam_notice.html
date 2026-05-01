@@ -1,0 +1,94 @@
+<style>
+    .modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 99;
+        padding: 150px 0 50px 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.4s ease, visibility 0.4s ease;
+    }
+
+    .modal-overlay.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .modal-content {
+        background: #fff;
+        padding: 30px;
+        max-width: 600px;
+        width: 90%;
+        border-radius: 8px;
+        position: relative;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        height: 100%;
+        overflow-y: scroll;
+        transform: translateY(-30px);
+        opacity: 0;
+        transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    .modal-overlay.active .modal-content {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    .close-btn {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        font-size: 20px;
+        font-weight: bold;
+        color: #333;
+        cursor: pointer;
+    }
+
+    .modal-content h2 {
+        color: #d00000;
+        margin-top: 0;
+        font-size: 2rem;
+        padding: 0 0 20px 0;
+    }
+
+    .modal-content p {
+        line-height: 1.6;
+        margin-bottom: 10px;
+    }
+
+    .modal-content ul {
+        margin-left: 20px;
+    }
+</style>
+
+<!-- Modal HTML -->
+<div class="modal-overlay" id="fraudModal">
+    <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <h2>⚠️ Public Notice - Fraud Alert</h2>
+        <p>It has come to our attention that an individual named <strong>Alwin&nbsp;Raj</strong>, also known by the alias <strong>Criss&nbsp;A</strong>, has been <strong>falsely using the name and reputation of our company</strong> to recruit individuals and offer fraudulent job opportunities.</p>
+        <p>Please be advised that <strong>this person is in no way associated with our organization</strong>, and any actions taken by him are <strong>unauthorized and illegal</strong>.</p>
+        <p>We want to make it explicitly clear that:</p>
+        <ul>
+            <li>Our company has no connection with Alwin&nbsp;Raj / Criss&nbsp;A.</li>
+            <li>All official recruitment and communication from our company are conducted through verified channels.</li>
+            <li>We do not request any payment or unpaid work from job applicants.</li>
+        </ul>
+        <p>We are taking <strong>immediate legal action</strong> against this individual and have reported the matter to the authorities.</p>
+        <p>If you or someone you know has been contacted by this person or has fallen victim to this scam, please:</p>
+        <ul>
+            <li>Stop all communication with the said individual</li>
+            <li>Save all evidence (messages, emails, documents)</li>
+            <li>Contact us through official channels</li>
+            <li>Report the incident to local law enforcement</li>
+        </ul>
+        <p><strong>- BRANDSTHINK Management</strong></p>
+    </div>
+</div>
